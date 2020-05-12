@@ -1,6 +1,13 @@
-// #include <cpprest/json.h>
+#include <btree/btree_set.h>
+#include <cstdlib>
 
 int main()
 {
-    // const auto parsed_value = web::json::value::parse(U("-22"));
+    btree::btree_set<int> s { };
+    auto res = s.insert(5);
+    if (!res.second) {
+        return EXIT_FAILURE;
+    }
+
+    return EXIT_SUCCESS;
 }
